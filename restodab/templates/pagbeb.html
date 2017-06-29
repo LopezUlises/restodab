@@ -7,9 +7,7 @@
 </HEAD>
 
 <BODY>
-<div>
-        <h1><a href="/">tu mama</a></h1>
-    </div>
+
 
     {% for beb in bebidas %}
         <div>
@@ -18,9 +16,6 @@
             <br>
         </div>
     {% endfor %}
-<h1><a href="{% url 'restodab.views.listar_bebida' %}">Bebidas</a></h1>
-<br>
-<h1><a href="{% url 'restodab.views.listar_lanch' %}">Lanch</a></h1>
 
 </BODY>
 

@@ -1,0 +1,22 @@
+<HTML>
+
+<HEAD>
+
+<TITLE>Un Titulo para el Browser de turno </TITLE>
+
+</HEAD>
+
+<BODY>
+
+
+    {% for lan in lanch %}
+        <div>
+            <p>Nombre: {{ lan.nombre }}</p>
+            <p>Precio: {{ lan.precio }}</p>
+            <br>
+        </div>
+    {% endfor %}
+
+</BODY>
+
+</HTML>
