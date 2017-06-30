@@ -1,0 +1,22 @@
+<HTML>
+
+<HEAD>
+
+<TITLE>Un Titulo para el Browser de turno </TITLE>
+
+</HEAD>
+
+<BODY>
+
+
+    {% for guar in guarnicion %}
+        <div>
+            <p>Nombre: {{ guar.nombre }}</p>
+            <p>Precio: {{ guar.precio }}</p>
+            <br>
+        </div>
+    {% endfor %}
+
+</BODY>
+
+</HTML>

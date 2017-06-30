@@ -1,0 +1,22 @@
+<HTML>
+
+<HEAD>
+
+<TITLE>Un Titulo para el Browser de turno </TITLE>
+
+</HEAD>
+
+<BODY>
+
+
+    {% for post in postre %}
+        <div>
+            <p>Nombre: {{ post.nombre }}</p>
+            <p>Precio: {{ post.precio }}</p>
+            <br>
+        </div>
+    {% endfor %}
+
+</BODY>
+
+</HTML>

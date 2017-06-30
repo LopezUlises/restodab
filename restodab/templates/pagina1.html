@@ -8,19 +8,19 @@
 
 <BODY>
 <div>
-        <h1><a href="/">tu mama</a></h1>
-    </div>
-
-    {% for beb in bebidas %}
-        <div>
-            <p>Nombre: {{ beb.nombre }}</p>
-            <p>Precio: {{ beb.precio }}</p>
-            <br>
-        </div>
-    {% endfor %}
-<h1><a href="{% url 'restodab.views.listar_bebida' %}">Bebidas</a></h1>
+        <h1><a href="/">Restodab</a></h1>
+</div>
 <br>
-<h1><a href="{% url 'restodab.views.listar_lanch' %}">Lanch</a></h1>
+<h2><a href="{% url 'restodab.views.listar_bebida' %}">Bebidas</a></h2>
+<br>
+<h2><a href="{% url 'restodab.views.listar_lanch' %}">Lanch</a></h2>
+<br>
+<h2><a href="{% url 'restodab.views.listar_postre' %}">Postre</a></h2>
+<br>
+<h2><a href="{% url 'restodab.views.listar_guarnicion' %}">Guarnicion</a></h2>
+<br>
+<h2><a href="{% url 'restodab.views.listar_breackfast' %}">Breackfast</a></h2>
+
 
 </BODY>
 

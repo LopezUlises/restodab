@@ -1,0 +1,22 @@
+<HTML>
+
+<HEAD>
+
+<TITLE>Un Titulo para el Browser de turno </TITLE>
+
+</HEAD>
+
+<BODY>
+
+
+    {% for bre in breack %}
+        <div>
+            <p>Nombre: {{ bre.nombre }}</p>
+            <p>Precio: {{ bre.precio }}</p>
+            <br>
+        </div>
+    {% endfor %}
+
+</BODY>
+
+</HTML>
