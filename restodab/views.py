@@ -7,7 +7,7 @@ from .models import Breackfast
 
 # Create your views here.
 def post_list(request):
-    bebidasvar = Bebida.objects.all()
+    bebidasvar = Bebida.objects.all().order_by('nombre')
     return render(request, 'pagina1.html', {'bebidas': bebidasvar})
 
 def listar_bebida(request):
