@@ -1,26 +1,36 @@
 <HTML>
 
 <HEAD>
-
+<meta charset="utf-8">
 <TITLE>Un Titulo para el Browser de turno </TITLE>
 
+<style>    
+	.trans{
+      background-color:white;
+      color:black;
+      position:center;
+      text-align:center;
+   
+    }
+</style>
 </HEAD>
 
-<BODY>
-<div>
-        <h1><a href="/">Restodab</a></h1>
-</div>
-<br>
-<h2><a href="{% url 'restodab.views.listar_bebida' %}">Bebidas</a></h2>
-<br>
-<h2><a href="{% url 'restodab.views.listar_lanch' %}">Lanch</a></h2>
-<br>
-<h2><a href="{% url 'restodab.views.listar_postre' %}">Postre</a></h2>
-<br>
-<h2><a href="{% url 'restodab.views.listar_guarnicion' %}">Guarnicion</a></h2>
-<br>
-<h2><a href="{% url 'restodab.views.listar_breackfast' %}">Breackfast</a></h2>
+<body background= "/static/resto.jpg">
 
+<div class="trans" style="z-index:1;filter:alpha(opacity=50);float:center;-moz-opacity:.50;opacity:.70">
+<div id="header"> 
+<h1>Bienvenidos a Resto Dab</h1>
+</div>
+
+<br><br><br><br>
+
+<a href="{% url 'restodab.views.listar_bebida' %}"><button type="button" class="btn btn-primary btn-lg">"Bebidas" </button></a>
+<a href="{% url 'restodab.views.listar_lanch' %}"><button type="button" class="btn btn-primary btn-lg">"Lanch" </button></a>
+<a href="{% url 'restodab.views.listar_postre' %}"><button type="button" class="btn btn-primary btn-lg">"Postre" </button></a>
+<a href="{% url 'restodab.views.listar_guarnicion' %}"><button type="button" class="btn btn-primary btn-lg">"Guarnicion" </button></a>
+<a href="{% url 'restodab.views.listar_breackfast' %}"><button type="button" class="btn btn-primary btn-lg">"Breackfast" </button></a>
+
+</div>
 
 </BODY>
 
