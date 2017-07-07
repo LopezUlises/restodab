@@ -4,9 +4,24 @@
 
 <TITLE>Un Titulo para el Browser de turno </TITLE>
 
+<style>    
+	.trans{
+      background-color:white;
+      color:black;
+      position:center;
+      text-align:center;
+   	  width:50%;
+	  margin: 0 auto;
+    }
+</style>
 </HEAD>
 
-<BODY>
+<body background= "/static/resto.jpg">
+
+<div class="trans" style="z-index:1;filter:alpha(opacity=50);float:center;-moz-opacity:.50;opacity:.70">
+<div id="header"> 
+<h1>Lanch</h1>
+</div>
 
 
     {% for lan in lanch %}
