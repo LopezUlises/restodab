@@ -18,13 +18,14 @@
 </div>
 
     {% for post in postre %}
-        <div>
-            <h4>{{ post.nombre }}</h4>
+        <div class="checkbox">
+            <font size=4><input type="checkbox" value="{{ post.precio }}">{{ post.nombre }}</font>
             <h4>Precio: {{ post.precio }}</h4>
             <br>
         </div>
     {% endfor %}
-
+</div>
+<a href="{% url 'restodab.views.post_list' %}"><button type="button" class="btn btn-primary btn-lg">Atras</button></a>
 </BODY>
 
 </HTML>
