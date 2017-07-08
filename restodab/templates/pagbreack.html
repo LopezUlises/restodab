@@ -1,34 +1,26 @@
+{% load staticfiles %}
 <HTML>
 
 <HEAD>
+    <link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap.min.css">
+    <link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap-theme.min.css">
+	<link rel="stylesheet" href="{% static 'css/restodab.css' %}">
 
-<TITLE>Un Titulo para el Browser de turno </TITLE>
+<TITLE>Breackfast</TITLE>
 
-<style>    
-	.trans{
-      background-color:white;
-      color:black;
-      position:center;
-      text-align:center;
-   	  width:50%;
-	  margin: 0 auto;
-    }
-</style>
 </HEAD>
 
-<body background= "/static/resto.jpg">
+<body background= "/static/img/resto.jpg">
 
 <div class="trans" style="z-index:1;filter:alpha(opacity=50);float:center;-moz-opacity:.50;opacity:.70">
 <div id="header"> 
 <h1>Breackfast</h1>
 </div>
 
-
-
     {% for bre in breack %}
         <div>
-            <p>Nombre: {{ bre.nombre }}</p>
-            <p>Precio: {{ bre.precio }}</p>
+            <h4>{{ bre.nombre }}</h4>
+            <h4>Precio: {{ bre.precio }}</h4>
             <br>
         </div>
     {% endfor %}

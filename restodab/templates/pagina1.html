@@ -1,35 +1,31 @@
+{% load staticfiles %}
 <HTML>
 
 <HEAD>
-<meta charset="utf-8">
-<TITLE>Un Titulo para el Browser de turno </TITLE>
 
-<style>    
-	.trans{
-      background-color:white;
-      color:black;
-      position:center;
-      text-align:center;
-   	  width:50%;
-	  margin: 0 auto;
-    }
-</style>
+    <link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap.min.css">
+    <link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap-theme.min.css">
+	<link rel="stylesheet" href="{% static 'css/restodab.css' %}">
+
+<meta charset="utf-8">
+<TITLE>Restodab</TITLE>
+
 </HEAD>
 
-<body background= "/static/resto.jpg">
+<body background= "/static/img/resto.jpg">
 
 <div class="trans" style="z-index:1;filter:alpha(opacity=50);float:center;-moz-opacity:.50;opacity:.70">
 <div id="header"> 
-<h1>Bienvenidos a Resto Dab</h1>
+<h1>Bienvenidos a RestoDab</h1>
 </div>
 
 <br><br><br><br>
 
-<a href="{% url 'restodab.views.listar_bebida' %}"><button type="button" class="btn btn-primary btn-lg">Breakfast </button></a>
-<a href="{% url 'restodab.views.listar_lanch' %}"><button type="button" class="btn btn-primary btn-lg">Lanch </button></a>
-<a href="{% url 'restodab.views.listar_postre' %}"><button type="button" class="btn btn-primary btn-lg">Bebidas </button></a>
-<a href="{% url 'restodab.views.listar_guarnicion' %}"><button type="button" class="btn btn-primary btn-lg">Guarnicion </button></a>
-<a href="{% url 'restodab.views.listar_breackfast' %}"><button type="button" class="btn btn-primary btn-lg">Postres </button></a>
+<a href="{% url 'restodab.views.listar_bebida' %}"><button type="button" class="btn btn-primary btn-lg">Bebida</button></a>
+<a href="{% url 'restodab.views.listar_lanch' %}"><button type="button" class="btn btn-primary btn-lg">Lanch</button></a>
+<a href="{% url 'restodab.views.listar_postre' %}"><button type="button" class="btn btn-primary btn-lg">Postre</button></a>
+<a href="{% url 'restodab.views.listar_guarnicion' %}"><button type="button" class="btn btn-primary btn-lg">Guarnicion</button></a>
+<a href="{% url 'restodab.views.listar_breackfast' %}"><button type="button" class="btn btn-primary btn-lg">Breakfast</button></a>
 
 </div>
 

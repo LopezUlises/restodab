@@ -1,33 +1,26 @@
+{% load staticfiles %}
 <HTML>
 
 <HEAD>
+    <link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap.min.css">
+    <link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap-theme.min.css">
+	<link rel="stylesheet" href="{% static 'css/restodab.css' %}">
 
-<TITLE>Un Titulo para el Browser de turno </TITLE>
-<style>    
-	.trans{
-      background-color:white;
-      color:black;
-      position:center;
-      text-align:center;
-   	  width:50%;
-	  margin: 0 auto;
-    }
-</style>
+<TITLE>Guarnicion</TITLE>
+
 </HEAD>
 
-<body background= "/static/resto.jpg">
+<body background= "/static/img/resto.jpg">
 
 <div class="trans" style="z-index:1;filter:alpha(opacity=50);float:center;-moz-opacity:.50;opacity:.70">
 <div id="header"> 
 <h1>Guarnicion</h1>
 </div>
 
-
-
     {% for guar in guarnicion %}
         <div>
-            <p>Nombre: {{ guar.nombre }}</p>
-            <p>Precio: {{ guar.precio }}</p>
+            <h4>{{ guar.nombre }}</h4>
+            <h4>Precio: {{ guar.precio }}</h4>
             <br>
         </div>
     {% endfor %}
