@@ -8,6 +8,14 @@
 
 <TITLE>Postre</TITLE>
 
+<script language="javascript">
+var cero = 0;
+function suma(){
+    var uno = document.all.uno.value;
+    document.all.resultado.innerText = "La suma es: " + (parseInt(cero) + parseInt(uno))
+}
+</script>
+
 </HEAD>
 
 <body background= "/static/img/resto.jpg">
@@ -19,8 +27,10 @@
 
     {% for post in postre %}
         <div>
-        <font size=4>{{ post.nombre }}</font>
+        <font size=4><input type="text" id="uno" value="{{ post.precio }}" disabled>{{ post.nombre }}</font>
             <h4>Precio: {{ post.precio }}</h4>
+<p><input type="button" onclick="suma();" value="Hacer operaciones">
+<span id="resultado">La suma es:</span></p>
             <br>
         </div>
     {% endfor %}
