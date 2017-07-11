@@ -4,9 +4,9 @@
 <HEAD>
     <link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap.min.css">
     <link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap-theme.min.css">
-	<link rel="stylesheet" href="{% static 'css/restodab.css' %}">
+    <link rel="stylesheet" href="{% static 'css/restodab.css' %}">
 
-<TITLE>Breackfast</TITLE>
+<TITLE>Bebida</TITLE>
 
 </HEAD>
 
@@ -14,18 +14,18 @@
 
 <div class="trans" style="z-index:1;filter:alpha(opacity=50);float:center;-moz-opacity:.50;opacity:.70">
 <div id="header"> 
-<h1>Breackfast</h1>
+<h1>Bebidas</h1>
 </div>
 
-    {% for bre in breack %}
+    {% for con in consumicion %}
         <div>
-            <h4>{{ bre.nombre }}</h4>
-            <h4>Precio: {{ bre.precio }}</h4>
+            <h4>{{ con.nombre }}</h4>
+            <h4>Precio: {{ con.precio }}</h4>
             <br>
         </div>
     {% endfor %}
 </div>
-<a href="{% url 'restodab.views.post_list' %}"><button type="button" class="btn btn-primary btn-lg">Atras</button></a>
+
 </BODY>
 
 </HTML>
