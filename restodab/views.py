@@ -29,4 +29,3 @@ def breakfast_list(request):
     convar = Consumicion.objects.all().filter(categoria="D").order_by('nombre')
     P = "Desayunos"
     return render(request, 'lista.html', {'consumicion': convar, 'titulo' : P})
-
