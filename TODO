@@ -1,0 +1,29 @@
+Feedback
+--------
+
+Muy buen proyecto, tenían un pequeño problema por el cual no estaba levantando la
+aplicación. El tema era que estaban poniendo links con "rutas invertidas" o
+"reverse routes". Esto es, le digo en el HTML que quiero un link a ... y escribo un
+nombre de la ruta. Ej.
+
+<a href="{% url 'restodab.views.bebidas_list' %}">
+
+Para que eso funcione, se debe dar un nombre a cada ruta, es decir a cada
+uno de los que agregamos en el archivo urls.py. Esto se hace con el atributo
+"name". Entonces, ademas de declarar que url va a ser y a que view corresponde,
+le aclaramos el nombre. Ej.
+
+url(r'^bebida/$', views.bebidas_list, name="restodab.views.bebidas_list")
+
+De esta forma Django es capaz de resolver la ruta y todo funciona.
+
+
+Por otro lado, si bien la aplicación ya está excelente, agrego unas cosas que
+sería interesante ver implementadas en la aplicación:
+
+TODO
+----
+
+* Hacer que las imagenes de cada producto se muestren correctamente
+* Poder seleccionar varios productos y su cantidad y realizar una compra.
+* Ver el calculo de monto de una compra.
