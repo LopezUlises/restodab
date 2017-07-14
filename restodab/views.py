@@ -1,4 +1,4 @@
-from django.shortcuts import render
+from django.shortcuts import render, get_object_or_404
 from .models import Consumicion
 
 
@@ -29,3 +29,7 @@ def breakfast_list(request):
     convar = Consumicion.objects.all().filter(categoria="D").order_by('nombre')
     P = "Desayunos"
     return render(request, 'lista.html', {'consumicion': convar, 'titulo' : P})
+
+def producto(request, pk):
+        con = get_object_or_404(Consumicion, pk=pk)
+        return render(request, 'produc.html', {'con': con})

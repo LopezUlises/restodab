@@ -16,15 +16,12 @@
 <div id="header">
 <h1>{{ titulo }}</h1>
 </div>
-    {% for con in consumicion %}
         <div>
-            <h1><a href="{% url 'restodab.views.producto' pk=con.pk %}">Comprar</a></h1>
             <h4>{{ con.nombre }}</h4>
             <h4>Precio: {{ con.precio }}</h4>
             <img src="/{{ con.imagen }}" width="155" height="120" >
             <br>
         </div>
-    {% endfor %}
 </div>
 <a href="{% url 'restodab.views.pagprincipal' %}"><button type="button" class="btn btn-primary btn-lg">Atras</button></a>
 </BODY>
